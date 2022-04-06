@@ -1,6 +1,8 @@
 module Lib
-    ( someFunc
+    ( someFunc,
     ) where
+
+import List
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
