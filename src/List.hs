@@ -1,6 +1,7 @@
 module List (
-myLast,
-myButLast
+  myLast,
+  myButLast,
+  elementAt,
 ) where 
 
 myLast :: [a] -> Maybe a
@@ -15,4 +16,9 @@ myButLast (x:xs) = inner x xs
     inner _ [] = Nothing
     inner a [b] = Just a
     inner _ (x:xs) = inner x xs
+
+elementAt :: [a] -> Int -> Maybe a
+elementAt (x:_) 0 = Just x
+elementAt (_:xs) i = elementAt xs (i - 1)
+elementAt [] _ = Nothing
 

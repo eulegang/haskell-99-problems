@@ -21,5 +21,13 @@ main = hspec $ do
       it "butLast zero elements" $ do
         List.myButLast [] `shouldBe` (Nothing :: Maybe Int)
         
+    describe "3) elementAt" $ do
+      it "elementAt 2" $ do
+        List.elementAt [1, 2, 3, 4] 2 `shouldBe` Just 3
 
+      it "elementAt 0" $ do
+        List.elementAt [1, 2, 3, 4] 0 `shouldBe` Just 1
+
+      it "elementAt 10" $ do
+        List.elementAt [1, 2, 3, 4] 10 `shouldBe` (Nothing :: Maybe Int)
 
