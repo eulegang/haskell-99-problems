@@ -37,3 +37,7 @@ main = hspec $ do
       it "with 2" $ do
         List.myLength [1, 2] `shouldBe` 2
 
+    describe "5) myReverse" $ do
+      it "..4" $ do
+        List.myReverse [0, 1, 2, 3, 4] `shouldBe` [4, 3, 2, 1, 0]
+
