@@ -31,3 +31,9 @@ main = hspec $ do
       it "elementAt 10" $ do
         List.elementAt [1, 2, 3, 4] 10 `shouldBe` (Nothing :: Maybe Int)
 
+    describe "4) myLength" $ do
+      it "with 4" $ do
+        List.myLength [1, 2, 3, 4] `shouldBe` 4
+      it "with 2" $ do
+        List.myLength [1, 2] `shouldBe` 2
+

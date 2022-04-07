@@ -2,6 +2,7 @@ module List (
   myLast,
   myButLast,
   elementAt,
+  myLength,
 ) where 
 
 myLast :: [a] -> Maybe a
@@ -21,4 +22,9 @@ elementAt :: [a] -> Int -> Maybe a
 elementAt (x:_) 0 = Just x
 elementAt (_:xs) i = elementAt xs (i - 1)
 elementAt [] _ = Nothing
+
+myLength :: [a] -> Int
+myLength [] = 0
+myLength (_:xs) = 1 + myLength xs
+
 
